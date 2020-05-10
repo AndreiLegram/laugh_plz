@@ -1,6 +1,10 @@
-# Security
+## IGNORED FILES
+yarn.lock
 config/
+package-lock.json
 
+
+## STANDART NODE
 # Logs
 logs
 *.log
@@ -43,7 +47,6 @@ build/Release
 # Dependency
 node_modules/
 jspm_packages/
-package-lock.json
 
 # TypeScript v1 declaration files
 typings/

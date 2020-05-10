@@ -1,6 +1,7 @@
 // --REQUIREMENTS
-const api = require('./config/api.js')
-const db = require('./config/db.js')
+const api = require('../config/api.js')
+const db = require('../config/db.js')
+const routes = require("./routes")
 //const model = require('./model.js')
 const Twit = require('twit')
 const express = require("express")
@@ -9,6 +10,9 @@ const Sequelize = require('sequelize')
 // --CONSTANTS
 const app = express()
 const now = Date.now()
+
+app.use(express.json());
+app.use(routes);
 
 app.get("/", function(req, res){
     // get the list of user id's that follow @laugh_plz
@@ -21,7 +25,7 @@ app.listen(db.port, function(req, res){
     console.log("Server running:")
     console.log(db.host + ":" + db.port)
     //model.reset();
-    GetLaughts();
+    //GetLaughts();
 })
  
 var T = new Twit({
