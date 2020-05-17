@@ -1,20 +1,13 @@
-const Sequelize = require('sequelize')
-const sequelize = new Sequelize('sistemaDeCadastro', 'aluno', 'aluno', {
-    host: "localhost",
-    dialect: "mysql"
-})
+const { Model, DataTypes } = require('sequelize');
 
-sequelize.authenticate().then(function(){
-    console.log("Conectado com sucesso!")
-}).catch(function(erro){
-    console.log("Falha ao se conectar: " + erro)
-})
+class Laugh extends Model {
+  static init(sequelize) {
+    super.init({
+      laugh: DataTypes.STRING,
+    }, {
+      sequelize
+    })
+  }
+}
 
-const Postagem = sequelize.define('postagens', {
-    titulo: {
-        type: Sequelize.STRING
-    },
-    conteudo: {
-        type: Sequelize.TEXT
-    }
-})
+module.exports = Laugh;

@@ -5,7 +5,6 @@ A Node.js bot for Twitter that laughs when mentioned.
 - [express](https://github.com/expressjs/express)
 - [sequelize](https://github.com/sequelize/sequelize)
 - [twit](https://github.com/ttezel/twit)
-- [pg](https://github.com/brianc/node-postgres)
 
 ## Made by
 Andrei Legramante
