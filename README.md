@@ -2,7 +2,7 @@
 A Node.js bot for Twitter that laughs when mentioned.
 
 ## Bot
-- [@laugh_plz](https://twitter.com/laugh_plz)
+Twitter redirect: [@laugh_plz](https://twitter.com/laugh_plz)
 
 ## Dependencies
 - [express](https://github.com/expressjs/express)

@@ -1,23 +1,23 @@
 {
   "name": "laugh_plz",
   "version": "1.0.0",
-  "description": "A Twitter Bot that laughs when mentioned.",
   "main": "index.js",
+  "description": "A Twitter Bot that laughs when mentioned.",
+  "author": "Andrei Legramante <andrei.legramante@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "run": "nodemon src/server.js"
+  },
   "dependencies": {
     "express": "^4.17.1",
-    "nodemon": "^2.0.3",
     "pg": "^8.1.0",
     "pg-hstore": "^2.3.3",
     "sequelize": "^5.21.7",
-    "sequelize-cli": "^5.5.1",
     "twit": "^2.2.11"
   },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon src/server.js"
-  },
-  "keywords": [],
-  "author": "Andrei Legramante <andrei.legramante@gmail.com>",
-  "license": "MIT"
+  "devDependencies": {
+    "nodemon": "^2.0.3",
+    "sequelize-cli": "^5.5.1"
+  }
 }

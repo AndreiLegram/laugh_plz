@@ -1,12 +1,7 @@
-const Laugh = require('../model');
+const Laugh = require('./model.js');
 
 module.exports = {
-  async selectAll(req, res) {
-    const laughs = await Laugh.findAll();
-
-    return res.json(laughs);
-  },
-
+  
   async insertAll(req, res) {
     const laughs = await Laugh.bulkCreate([
         { laugh: 'KKKKKKKKKK' },
@@ -34,24 +29,16 @@ module.exports = {
     return res.json(laughs);
   },
 
-  async insertLaugh(req, res) {
-    const { laugh } = req.body;
+  async selectAll(req, res) {
+    const laughs = await Laugh.findAll();
 
-    const laugh = await Laugh.create({ laugh });
-
-    return res.json(laugh);
+    return res.json(laughs);
   },
 
-  async deleteLaugh(req, res) {
-    const { id } = req.params;
-    const { laugh } = req.body;
+  async deleteAll(req, res) {
+    const laughs = await Laugh.destroy({ truncate: true });
 
-    const laugh = await User.findByPk(id);
-
-    if (!laugh) {
-      return res.status(400).json({ error: 'Laugh not found' });
-    }
-
-    return res.json();
+    return res.json(laughs);
   }
+
 };
